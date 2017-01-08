@@ -1,0 +1,17 @@
+h3
+    if OK
+        span.fa.fa-check-circle.OK-icon
+        | Connect&eacute; &agrave; l'Arduino
+    if ERROR
+        span.fa.fa-exclamation-circle.ERROR-icon
+        | Impossible d'ouvrir port sp&eacute;cifi&eacute;
+        br
+        | V&eacute;rifiez que le port n'est pas d&eacute;j&agrave; utilis&eacute;
+    if TIMEOUT
+        span.fa.fa-exclamation-circle.ERROR-icon
+        | L'Arduino ne r&eacute;pond pas
+        br
+        |V&eacute;rifiez le port et le baudrate
+    if WAIT
+        span(class="fa fa-spin fa-cog WAIT-icon")
+        | Connection en cours ...

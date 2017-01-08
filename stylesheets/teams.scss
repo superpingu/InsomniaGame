@@ -1,0 +1,142 @@
+#odd-team, #even-team {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  width: 50vw;
+  height: 100vh;
+  z-index: 10;
+  .win-img {
+    display: none;
+    position: absolute;
+    top: 1vh;
+    width: 60vw;
+    -vendor-animation-duration: 0.5s;
+    z-index: 100;
+  }
+  .score-box {
+    position: absolute;
+    top: 70.7vh;
+    width: 14vw;
+    font-family: 'Economica', sans-serif;
+    font-size: 13vh;
+  }
+  .win-game {
+    position: absolute;
+    width:50vw;
+    height: 100vh;
+    top: 0;
+    z-index: 100;
+    display: none;
+  }
+}
+
+#even-team.lose-game {
+  background-color: rgba(0, 0, 0, 0.80);
+}
+#odd-team.lose-game {
+  background-color: rgba(0, 0, 0, 0.57);
+}
+
+#odd-team {
+  left: 0;
+  .score-box {
+    left: 36.3vw;
+    text-align: left;
+    color: white;
+    text-shadow: #2a2aba 4px 0px, #2a2aba 4px 4px, #2a2aba 4px -4px, #2a2aba -4px 4px,
+                 #2a2aba -4px 0px, #2a2aba -4px -4px, #2a2aba 0px 4px, #2a2aba 0px -4px;
+  }
+  .win-img {
+    left: 2vw;
+  }
+  .win-game {
+    left: 0;
+    background: url("../images/blue-win.png");
+    background-size: cover;
+  }
+}
+#even-team {
+  left: 50vw;
+  .score-box {
+    right: 36.3vw;
+    text-align: right;
+    color: black;
+    text-shadow: #e4342a 3px 0px, #e4342a 3px 3px, #e4342a 3px -3px, #e4342a -3px 3px,
+                 #e4342a -3px 0px, #e4342a -3px -3px, #e4342a 0px 3px, #e4342a 0px -3px;
+  }
+  .win-img {
+    right: 2vw;
+  }
+  .win-game {
+    right: 0;
+    background: url("../images/red-win.png");
+    background-size: cover;
+  }
+}
+
+#score-board-container {
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  #countdown, #final-countdown {
+    position: absolute;
+    font-family: 'Transist', sans-serif;
+    color: #28e415;
+    text-shadow: #000000 2px 0px, #000000 2px 2px, #000000 2px -2px, #000000 -2px 2px,
+    #000000 -2px 0px, #000000 -2px -2px, #000000 0px 2px, #000000 0px -2px;
+    text-align: center;
+  }
+  #countdown {
+    top: 2vh;
+    left: 35vw;
+    width: 30vw;
+    font-size: 13vh;
+  }
+  #final-countdown {
+    top: 12vh;
+    left: 0;
+    width: 100vw;
+    font-size: 30vh;
+  }
+  #happy-info {
+    position: absolute;
+    top: 55vh;
+    left: 35vw;
+    width: 30vw;
+    height: 20vh;
+    color: #ffffff;
+    font-size: 6vh;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: #430b4d 2px 0px, #430b4d 2px 2px, #430b4d 2px -2px, #430b4d -2px 2px,
+    #430b4d -2px 0px, #430b4d -2px -2px, #430b4d 0px 2px, #430b4d 0px -2px;
+  }
+  .endGameTitle {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    top: 4vh;
+    color: #2ee912;
+    font-weight: 700;
+    font-size: 8vh;
+    text-shadow: #000000 2px 0px, #000000 2px 2px, #000000 2px -2px, #000000 -2px 2px,
+    #000000 -2px 0px, #000000 -2px -2px, #000000 0px 2px, #000000 0px -2px;
+  }
+}
+
+@font-face {
+  font-family: 'Economica';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Economica.otf);
+}
+@font-face {
+  font-family: 'Transist';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Transist.ttf);
+}

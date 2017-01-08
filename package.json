@@ -1,0 +1,27 @@
+{
+  "name": "Insomnia",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.html",
+  "window": {
+    "title": "Insomnia Game",
+    "icon": "images/icon.png",
+    "toolbar": true,
+    "frame": true,
+    "min_width": 800,
+    "min_height": 600,
+    "resizable": true,
+    "show": true,
+    "fullscreen": false,
+    "position": "center"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "debug": "~2.2.0",
+    "express": "^4.13.3",
+    "jade": "~1.11.0",
+    "jquery": "~2.1.4",
+    "serialport": "~2.0.0",
+    "sugar": "~1.4.1"
+  }
+}

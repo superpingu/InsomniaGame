@@ -1,0 +1,9 @@
+extends serialSelect
+
+block port
+    select(id="portselect", name="serial-port-select")
+        each port in list
+            if port.comName == portname
+                option(value="#{port.comName}" selected)= port.comName
+            else
+                option(value="#{port.comName}")= port.comName

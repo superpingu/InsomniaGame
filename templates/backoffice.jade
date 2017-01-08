@@ -1,0 +1,68 @@
+doctype html
+html
+   head
+      title Insomnia Admin
+      meta(name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no")
+      link(rel='stylesheet', href='stylesheets/backoffice.css')
+      link(rel='stylesheet', href='stylesheets/font-awesome.css')
+   body
+      center
+         h1
+            span.fa.fa-glass
+            | Insomnia : Administration
+
+      h2
+         span.fa.fa-trophy
+         | Scores
+
+      h3.odd Equipe Bleue
+      input(type="number", value="#{teams().odd.score()}", min="0").odd-score
+      a.odd-score-set modifier
+      a.odd-score-reset r&eacute;initialiser
+
+      h3.even Equipe Rouge
+      input(type="number", value="#{teams().even.score()}", min="0").even-score
+      a.even-score-set modifier
+      a.even-score-reset r&eacute;initialiser
+
+      br
+      br
+      h2
+         span.fa.fa-beer
+         | Horror Time
+      label(for="happyTime-message") Message :
+      input(id="happyTime-message" value="#{config().happyMessage}")
+      a.update-message mettre &agrave; jour
+      br
+      label(for="happyTime-duration") Dur&eacute;e :
+      input(type="number", id="happyTime-duration" value="#{config().happyTime}")
+      | &nbsp;minutes
+      a.start-time d&eacute;marrer
+      a.stop-time arr&ecirc;ter
+      br
+      br
+      h2
+         span.fa.fa-random
+         | Probabilit&eacute; des boissons gratuites
+      label(for="probability") probabilit&eacute; :
+      input(type="number", id="probability" value="#{config().freeDrink}")
+      | &nbsp;%
+      a.update-proba mettre &agrave; jour
+      br
+      br
+      h2
+         span.fa.fa-clock-o
+         | Fin de jeu
+      label(for="endCountdown") compte &agrave; rebours de fin :
+      input(type="number" id="endCountdown" value="#{config().endCountdown}")
+      | &nbsp;minutes
+      a.stop-game lancer le compte à rebours
+      br
+      label(for="endTime") arr&ecirc;t automatique &agrave;
+      input(id="endTime" value="#{config().endTime}")
+      | &nbsp;heure (hh:mm)
+      a.update-endTime mettre &agrave; jour
+
+      script(src="bower_components/jquery/dist/jquery.min.js")
+      script(src="scripts/clientadmin.js")
+
